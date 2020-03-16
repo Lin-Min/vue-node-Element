@@ -15,20 +15,29 @@ function startLoading(){
 function endLoading(){
   loading.close()
 }
+
+ const authorn =  axios.create({
+  baseURL: 'http://localhost:3000',
+  timeout: 5000
+});
+
 // 请求拦截
-axios.interceptors.request.use(config => {
+authorn.interceptors.request.use(config => {
   const token = localStorage.getItem("leToken");
 // 加载动画
 startLoading()
 if (token) 
+{
   config.headers['Authorization'] = token
+}
+
 return config;
 },error => {
 return Promise.reject(error);
 });
 
 // 响应拦截
-axios.interceptors.response.use(response => {
+authorn.interceptors.response.use(response => {
 // 关闭动画
 endLoading()
 return response;
@@ -46,4 +55,4 @@ return response;
 return Promise.reject(error);
 });
 
-export default axios
+export default authorn

@@ -28,8 +28,12 @@ mongoose.connect(db, { useNewUrlParser: true,  useUnifiedTopology: true })
       })
 
 require('./config/passports')(passport)
-// app.get('/', (req, res) => {
-//   res.send('Hello World')
+
+// app.all("*", function(req, res, next) {
+//   res.header("Access-Control-Allow-Origin", "*");
+//   res.header("Access-control-Allow-Headers", "Authorization");
+//   res.header("Access-Control-Allow-Methods", "GET,POST,DELETE,PUT,OPTIONS,HEAD,FETCH");
+//   next();
 // })
 
 app.use('/api/user', users)
