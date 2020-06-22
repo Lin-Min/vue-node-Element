@@ -51,12 +51,21 @@
 </template>
 
 <script>
-//import x from ''
 export default {
   name: "dialogInfo",
   props: {
-    dialogAdd: Object,
-    formData: Object
+    dialogAdd: {
+      type: Object,
+      default () {
+        return {}
+      }
+    },
+    formData: {
+      type: Object,
+      default () {
+        return {}
+      }
+    }
   },
   data() {
     return {
@@ -84,7 +93,7 @@ export default {
               type: "success"
             });
             this.dialogAdd.show = false;
-            this.$emit("update");
+            this.$emit("update")
           })
           .catch(err => {
             console.error(err);

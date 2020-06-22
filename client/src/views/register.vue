@@ -2,7 +2,7 @@
   <div class="register">
     <section class="form_container">
       <div class="man_tip">
-        <span class="title">小民后台管理系统</span>
+        <span class="title">小智后台管理系统</span>
         <el-form
           :model="registerUser"
           :rules="rules"
