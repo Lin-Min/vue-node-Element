@@ -1,7 +1,7 @@
 <template>
   <div class='home'>
   <div class="container">
-    <h1 class="title">小智前端</h1>
+    <h1 class="title">小民前端</h1>
     <p class="content">专注于学习前端,无法自拔!</p>
     </div>  
   </div>

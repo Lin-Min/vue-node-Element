@@ -3,7 +3,7 @@
     <el-row>
       <el-col :span="6" class="logo-container">
         <img class="logo" src="@a/logo.png" />
-        <span class="title">小智后台管理系统</span>
+        <span class="title">小民后台管理系统</span>
       </el-col>
       <el-col :span="6" class="i-user">
         <div class="userinfo">

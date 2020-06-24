@@ -17,7 +17,7 @@ function endLoading(){
 }
 
  const authorn =  axios.create({
-  // baseURL: 'http://ip地址/host/',
+  // baseURL: 'http://服务器地址//host/',
   baseURL: 'http://localhost:3000',
   timeout: 5000
 });
